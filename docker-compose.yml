@@ -1,0 +1,56 @@
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: notification-postgres
+    environment:
+      POSTGRES_DB: notification_db
+      POSTGRES_USER: notification_user
+      POSTGRES_PASSWORD: notification_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - notification-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U notification_user -d notification_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: notification-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - notification-net
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  activemq:
+    image: apache/activemq-classic:latest
+    container_name: notification-activemq
+    ports:
+      - "61616:61616"   # JMS
+      - "8161:8161"     # Console web
+    volumes:
+      - activemq_data:/var/opt/activemq/data
+    networks:
+      - notification-net
+
+volumes:
+  pg_data:
+  pgadmin_data:
+  activemq_data:
+
+networks:
+  notification-net:
+    driver: bridge
