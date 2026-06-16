@@ -70,9 +70,9 @@ Aqui estão as tecnologias utilizadas neste projeto:
 
 ![Painel Geral](public/images/dashboard.png)
 
-- Envio de Mensagens e Pré-visualização Dinâmica de Templates
+ - Gerenciamento de Modelos de Mensagem (Templates Ativos)
 
-![Enviar Notificação](public/images/send.png)
+![Modelos de Mensagem](public/images/templates.png)
 
 
 ## Links
