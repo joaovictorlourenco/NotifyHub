@@ -15,7 +15,7 @@ NotifyHub é uma aplicação moderna e robusta para disparo e rastreamento de no
 
 Aqui estão as tecnologias utilizadas neste projeto:
 
-* Java versão 21
+* Java versão 17
 * Spring Boot versão 3.3.x
 * React versão 19
 * Vite versão 8
