@@ -78,7 +78,7 @@ Aqui estão as tecnologias utilizadas neste projeto:
 ## Links
   - Repositório: https://github.com/joaovictorlourenco/NotifyHub.git
   - Em caso de bugs sensíveis como vulnerabilidades de segurança, entre em contato diretamente com:
-    Lucassiqueiraferandes07@gmail.com. Valorizamos seu esforço em melhorar a segurança deste projeto!
+    joaovictorlourenco886@gmail.com. Valorizamos seu esforço em melhorar a segurança deste projeto!
 
   ## Versão
 
@@ -87,7 +87,7 @@ Aqui estão as tecnologias utilizadas neste projeto:
 
   ## Autor
 
-  * **Lucas Siqueira Fernandes** 
+  * **João Victor Lourenço** 
 
   Por favor, siga no GitHub e junte-se a nós!
   Obrigado pela visita e boas linhas de código!
